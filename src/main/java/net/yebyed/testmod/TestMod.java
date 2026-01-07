@@ -2,6 +2,8 @@ package net.yebyed.testmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.yebyed.testmod.block.ModBlocks;
+import net.yebyed.testmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +20,8 @@ public class TestMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
